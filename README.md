@@ -22,12 +22,14 @@ This repository hosts the submission by Arun Sivarajah for the Fetch Rewards 202
 ## POST /add
 ### Request
 `POST /add/`
+<!-- tsk -->
 `curl -d '{ "payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z" }' -H 'Content-Type: application/json' http://localhost:8000/add`
 ### Response
 * None
 ## POST /spend
 ### Request
 `POST /spend/`
+<!-- tsk -->
 `$ curl -d '{ "points": 5000 }' -H 'Content-Type: application/json' http://localhost:8000/spend`
 ### Response
 ```
@@ -41,6 +43,7 @@ This repository hosts the submission by Arun Sivarajah for the Fetch Rewards 202
 ## GET /balance
 ### Request
 `GET /balance/`
+<!-- tsk -->
 `$ curl http://localhost:8000/balance`
 ### Response
 ```
@@ -51,7 +54,7 @@ This repository hosts the submission by Arun Sivarajah for the Fetch Rewards 202
 }
 ```
 ## Technologies Used
-* [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
+* [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.(v18.17.1)
 * [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.
 ## Authors
 * [agsiv25](https://github.com/agsiv25)
