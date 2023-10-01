@@ -91,9 +91,7 @@ app.post("/spend", (req, res) => {
 
         const spentPoints = spend(points);
         //format output string
-        const output = '[' + spentPoints.map(obj => '\n\t' + JSON.stringify(obj)).join(',') + '\n]';
-
-        res.status(200).send(output);
+        res.status(200).send(spentPoints);
 
     }
     catch (error) {
@@ -113,8 +111,12 @@ app.get("/balance", (req, res) => {
             payerPoints.set(payer, payerPoints.get(payer) + points);
         }
         //format output string
-        const output = '{\n' + Array.from(payerPoints.entries()).map(entry => `\t"${entry[0]}": ${entry[1]}`).join(',\n') + '\n}';
-
+        let output = "{";
+        for (let [key, value] of payerPoints) {
+            output += `${key}: ${value}, `;
+        }
+        output = output.slice(0, -2);
+        output += "}";
         res.status(200).send(output);
     }
     catch (error) {

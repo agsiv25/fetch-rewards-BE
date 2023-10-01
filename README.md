@@ -30,22 +30,26 @@ This repository hosts the submission by Arun Sivarajah for the Fetch Rewards 202
 `POST /spend/`
 `$ curl -d '{ "points": 5000 }' -H 'Content-Type: application/json' http://localhost:8000/spend`
 ### Response
-`[`
-`    {"payer":"DANNON","points":-300},`
-`    {"payer":"UNILEVER","points":-200},`
-`    {"payer":"DANNON","points":200},`
-`    {"payer":"MILLER COORS","points":-4700}`
-`]`
+```
+[
+    {"payer":"DANNON","points":-300},
+    {"payer":"UNILEVER","points":-200},
+    {"payer":"DANNON","points":200},
+    {"payer":"MILLER COORS","points":-4700}
+]
+```
 ## GET /balance
 ### Request
 `GET /balance/`
 `$ curl http://localhost:8000/balance`
 ### Response
-`{`
-`    "DANNON": 1000,`
-`    "UNILEVER": 0,`
-`    "MILLER COORS": 5300`
-`}`
+```
+{
+    "DANNON": 1000,
+    "UNILEVER": 0,
+    "MILLER COORS": 5300
+}
+```
 ## Technologies Used
 * [NodeJS](https://nodejs.org/) This is a cross-platform runtime environment built on Chrome's V8 JavaScript engine used in running JavaScript codes on the server. It allows for installation and managing of dependencies and communication with databases.
 * [ExpressJS](https://www.expresjs.org/) This is a NodeJS web application framework.
