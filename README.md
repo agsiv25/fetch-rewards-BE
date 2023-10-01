@@ -23,14 +23,18 @@ This repository hosts the submission by Arun Sivarajah for the Fetch Rewards 202
 ### Request
 `POST /add/`
 <!-- tsk -->
-`curl -d '{ "payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z" }' -H 'Content-Type: application/json' http://localhost:8000/add`
+```
+curl -d '{ "payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z" }' -H 'Content-Type: application/json' http://localhost:8000/add
+```
 ### Response
 * None
 ## POST /spend
 ### Request
 `POST /spend/`
 <!-- tsk -->
-`$ curl -d '{ "points": 5000 }' -H 'Content-Type: application/json' http://localhost:8000/spend`
+```
+$ curl -d '{ "points": 5000 }' -H 'Content-Type: application/json' http://localhost:8000/spend
+```
 ### Response
 ```
 [
@@ -44,7 +48,9 @@ This repository hosts the submission by Arun Sivarajah for the Fetch Rewards 202
 ### Request
 `GET /balance/`
 <!-- tsk -->
-`$ curl http://localhost:8000/balance`
+```
+$ curl http://localhost:8000/balance
+```
 ### Response
 ```
 {
