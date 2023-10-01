@@ -1,4 +1,3 @@
-// README.md
 # Fetch-Rewards-BE
 ## Introduction
 This repository hosts the submission by Arun Sivarajah for the Fetch Rewards 2024 Summer Backend Engineering Internship

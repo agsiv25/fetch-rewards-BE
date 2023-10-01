@@ -1,0 +1,53 @@
+1. In the process of creating my RESTful API, I utilized JavaScript, using the Node.js and
+ Express.js framework. Multiple factors led to me using this specific stack for my assessment.
+ First, I noticed that part of the qualifications listed under the open position included Node.js.
+ Having utilized this framework myself, I wanted to take the chance to demonstrate my proficiency 
+ through this assessment. In addition, this past summer I had an internship in which I had to 
+ create a full-stack application, writing the backend in Node.js and Express.js. Having this 
+ experience allowed me to focus more on the actual design of the program versus struggling with 
+ simple syntax in a new language. Finally, JavaScript is an industry standard for developing web 
+ applications, with Node.js being a very popular framework, so I wanted to try and get as close as 
+ possible to an experience I would have actually working in the industry. To test and debug my API, 
+ I decided to use Postman, as it has a very developer-friendly interface for interacting with 
+ API's. However, in my readme, I demonstrated the utilization of my API with curl commands, so that 
+ a relatively inexperienced user would not have to download unnecessary packages and software. 
+ Instead, they can interact with the API in a straightforward manner in through the terminal. 
+ Finally, I am hosting my code in Github. While I also have experience using Gitlab, Github is more 
+ ubiquitous and is more familiar to me.
+
+2. One of the advantages of my solution is my modular approach and the use of the Express.js 
+ framework. By breaking my code up into helper functions, I am able to improve the reusability 
+ of my code and make it more conducive to updates and improvements. It also allows for a more 
+ streamlined debugging process, facilitating the isolation and identification of errors. Using 
+ Express.js means that I am working with an industry-standard framework for RESTful APIs and 
+ developers who may improve on my code have plenty of online resources to aid in development. 
+ Another advantage of my solution is error handling. I have surrounded my code with try/catch 
+ blocks so that even if I am not checking for a specific error, an error code response is sent with 
+ the generated error.
+ 
+ One disadvantage of my solution is scalability. Aside from accommodating multiple users, the data 
+ structures I utilized in my solution were targeted towards simplicity rather than efficiency. In 
+ order to store my transactions based on their timestamp, I am iterating through my entire list of 
+ transactions in order to find their correct spot. While this solution is adequate for a small 
+ amount of transactions, inserting transactions when the list is very large will be very 
+ inefficient(O(n) time complexity). If I wanted my solution to operate faster on larger datasets, I 
+ could replace the List with a Binary Search Tree like a Red-Black Tree. I could create nodes for 
+ each transaction and then insert those nodes in O(logn) time and still have the retrieval of all 
+ the nodes be O(n). If I wish to expand the scalability of my code even further, I can instead use a 
+ tool like MongoDB to store my data in a database. This also improves the data persistence of my 
+ code, as inputted data will not disappear if the server restarts. 
+
+3. My first introduction to a large software engineering project came in my Junior year of high 
+ school. Through a program at my school, I was paired with a professor at Lake Forest College. This 
+ was during peak Covid time, and the professor was working on creating a Convolutional Neural 
+ Network to classify lung X-ray images as Covid Pneumonia, Other Pneumonia, or Healthy. He tasked me 
+ with building a full model from scratch, starting with image processing, then creating the Network 
+ itself, and finally visualizing the output with heatmaps. Being in high school, however, I was not 
+ able to fully grasp the complex mathematics behind Neural Networks. This made it both a challenge 
+ and an adventure, as I was taking a deep dive into completely unknown territory. To complete the 
+ project, I had to make sure I was utilizing all my resources, frequently consulting online forums 
+ for troubleshooting issues, and always consulting with my professor if all other sources failed. 
+ While the task was miles beyond my skill set, I was greatly motivated by the fact that my work had 
+ a tangible impact, and was helping solve a problem I was experiencing myself. While the efficiency 
+ of my model was not to the standard of other researchers at the time, I was able to find my passion 
+ for coding, which ultimately inspired me to pursue Computer Engineering in college.
