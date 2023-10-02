@@ -90,8 +90,7 @@ app.post("/spend", (req, res) => {
         }
 
         const spentPoints = spend(points);
-        //format output string
-        res.status(200).send(spentPoints);
+        res.status(200).json(spentPoints);
 
     }
     catch (error) {
@@ -110,14 +109,12 @@ app.get("/balance", (req, res) => {
             }
             payerPoints.set(payer, payerPoints.get(payer) + points);
         }
-        //format output string
-        let output = "{";
+        //format output json
+        const output = {}
         for (let [key, value] of payerPoints) {
-            output += `${key}: ${value}, `;
+            output[key] = value;
         }
-        output = output.slice(0, -2);
-        output += "}";
-        res.status(200).send(output);
+        res.status(200).json(output);
     }
     catch (error) {
         return res.status(400).json({ error: error.message });

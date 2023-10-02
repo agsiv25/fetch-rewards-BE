@@ -35,7 +35,7 @@ curl -d '{ "payer": "DANNON", "points": 300, "timestamp": "2022-10-31T10:00:00Z"
 $ curl -d '{ "points": 5000 }' -H 'Content-Type: application/json' http://localhost:8000/spend
 ```
 ### Response
-```
+```JSON
 [
     {"payer":"DANNON","points":-300},
     {"payer":"UNILEVER","points":-200},
@@ -51,11 +51,11 @@ $ curl -d '{ "points": 5000 }' -H 'Content-Type: application/json' http://localh
 $ curl http://localhost:8000/balance
 ```
 ### Response
-```
+```JSON
 {
-    "DANNON": 1000,
-    "UNILEVER": 0,
-    "MILLER COORS": 5300
+    "DANNON":1100,
+    "UNILEVER":200,
+    "MILLER COORS":10000
 }
 ```
 ## Technologies Used
